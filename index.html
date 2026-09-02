@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="theme-color" content="#070309" />
+    <title>格付け Wedding Check</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="presentation-shell" aria-live="polite">
+      <section class="stage" id="stage">
+        <div class="grain"></div>
+
+        <section class="scene is-active" data-scene="title">
+          <button class="thumbnail-start" data-action="next" aria-label="ゲームを開始する">
+            <img src="assets/hero.png" alt="ゲスト格付けチェック" />
+          </button>
+        </section>
+
+        <section class="scene rank-overview-scene" data-scene="ranks">
+          <div class="rank-overview-grid">
+            <img src="assets/rank/rank-ichiryu-guest.png" alt="一流ゲスト" />
+            <img src="assets/rank/rank-sokkuri-guest.png" alt="そっくりゲスト" />
+            <img src="assets/rank/rank-niryu-guest.png" alt="二流ゲスト" />
+            <img src="assets/rank/rank-no-value-guest.png" alt="映す価値なし" />
+          </div>
+        </section>
+
+        <section class="scene question-scene" data-scene="question">
+          <header class="show-header">
+            <p id="host-question-number"></p>
+            <h2 id="host-question-title"></h2>
+          </header>
+          <p class="instruction">各テーブルで相談して、回答を確定してください</p>
+          <div class="choices" id="host-choices"></div>
+        </section>
+
+        <section class="scene reveal-scene" data-scene="reveal">
+          <p class="reveal-kicker">CORRECT ANSWER</p>
+          <h2>正解は<span id="host-answer-letter"></span></h2>
+          <div class="verdict">次の問題への合言葉: <strong id="host-passphrase"></strong></div>
+          <button class="start-button" data-action="next" id="host-reveal-next">次の問題へ</button>
+        </section>
+
+        <section class="scene result-scene" data-scene="result">
+          <div class="host-final-panel">
+            <p id="host-final-message"></p>
+            <p>最終結果確認の合言葉: <strong id="host-final-passphrase"></strong></p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <main class="table-client" id="table-client" aria-live="polite">
+      <section class="table-card table-entry" id="table-entry">
+        <img class="entry-thumbnail" src="assets/hero.png" alt="ゲスト格付けチェック" />
+        <label class="passphrase-input visually-hidden-label">
+          <input id="entry-passphrase" aria-label="参加用合言葉" autocomplete="off" placeholder="合言葉を入力" />
+        </label>
+        <p class="table-status" id="entry-status"></p>
+        <button class="table-confirm" id="entry-submit" disabled>ゲームに参加する</button>
+      </section>
+      <section class="table-card" id="table-game" hidden>
+        <div id="table-question-content">
+          <p class="table-kicker">GUEST RANKING CHECK</p>
+          <p class="table-name" id="table-name">1 卓</p>
+          <p class="table-question-count" id="table-question-count"></p>
+          <h1 id="table-question-title"></h1>
+          <p class="table-copy" id="table-copy">テーブルで相談して、ひとつ選んでください。</p>
+          <div class="table-choices" id="table-choices"></div>
+          <p class="table-status" id="table-status">まだ回答していません</p>
+          <button class="table-confirm" id="table-confirm" disabled>この回答で確定</button>
+        </div>
+        <div class="table-complete" id="table-complete" hidden>
+          <img class="selected-room-image" id="table-selected-room" alt="選択した控室" />
+          <label class="passphrase-input">合言葉を入力
+            <input id="passphrase" autocomplete="off" placeholder="正解発表で確認" />
+          </label>
+          <p class="table-status" id="passphrase-status"></p>
+          <button id="table-next" disabled>次の問題へ</button>
+        </div>
+        <div class="table-result-display" id="table-result-display" hidden>
+          <img id="table-rank-image" alt="最終ランク" />
+          <section class="table-result-details">
+            <p class="result-table-number" id="result-table-number"></p>
+            <p class="result-comment" id="result-comment"></p>
+            <p class="result-closing-message" id="result-closing-message"></p>
+          </section>
+        </div>
+      </section>
+    </main>
+    <nav class="operator-bar" aria-label="司会操作">
+      <span id="scene-indicator">OPENING</span>
+      <button data-action="previous">戻る</button>
+      <button data-action="next">次へ</button>
+      <button data-action="restart">リセット</button>
+    </nav>
+    <script src="app.js"></script>
+  </body>
+</html>

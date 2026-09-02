@@ -1,0 +1,72 @@
+{
+  "title": "ゲスト格付けチェック",
+  "entryPassphrase": "hoge",
+  "finalResultMessage": "各テーブルで最終結果を確認してください",
+  "finalResultPassphrase": "hoge",
+  "closingMessage": "これからもhoge夫妻をよろしくお願いします",
+  "questions": [
+    {
+      "title": "どちらが高級ミネラルウォーター？",
+      "choices": [
+        { "id": "A", "image": "assets/room/room-a.png", "mobileImage": "assets/room/room-a-mobile.png" },
+        { "id": "B", "image": "assets/room/room-b.png", "mobileImage": "assets/room/room-b-mobile.png" }
+      ],
+      "answer": "B",
+      "passphrase": "hoge"
+    },
+    {
+      "title": "どれが高級ポテトチップス？",
+      "choices": [
+        { "id": "A", "image": "assets/room/room-a.png", "mobileImage": "assets/room/room-a-mobile.png" },
+        { "id": "B", "image": "assets/room/room-b.png", "mobileImage": "assets/room/room-b-mobile.png" },
+        { "id": "C", "image": "assets/room/room-c.png", "mobileImage": "assets/room/room-c-mobile.png" }
+      ],
+      "answer": "C",
+      "passphrase": "hoge"
+    },
+    {
+      "title": "どれが高級オレンジジュース？",
+      "choices": [
+        { "id": "A", "image": "assets/room/room-a.png", "mobileImage": "assets/room/room-a-mobile.png" },
+        { "id": "B", "image": "assets/room/room-b.png", "mobileImage": "assets/room/room-b-mobile.png" },
+        { "id": "C", "image": "assets/room/room-c.png", "mobileImage": "assets/room/room-c-mobile.png" }
+      ],
+      "answer": "A",
+      "passphrase": "hoge"
+    },
+    {
+      "title": "どちらが高級チョコレート？",
+      "choices": [
+        { "id": "A", "image": "assets/room/room-a.png", "mobileImage": "assets/room/room-a-mobile.png" },
+        { "id": "B", "image": "assets/room/room-b.png", "mobileImage": "assets/room/room-b-mobile.png" }
+      ],
+      "answer": "B",
+      "passphrase": "hoge"
+    },
+    {
+      "title": "どれが高級コーヒー？",
+      "choices": [
+        { "id": "A", "image": "assets/room/room-a.png", "mobileImage": "assets/room/room-a-mobile.png" },
+        { "id": "B", "image": "assets/room/room-b.png", "mobileImage": "assets/room/room-b-mobile.png" },
+        { "id": "C", "image": "assets/room/room-c.png", "mobileImage": "assets/room/room-c-mobile.png" }
+      ],
+      "answer": "C",
+      "passphrase": "hoge"
+    },
+    {
+      "title": "どちらが高級バウムクーヘン？",
+      "choices": [
+        { "id": "A", "image": "assets/room/room-a.png", "mobileImage": "assets/room/room-a-mobile.png" },
+        { "id": "B", "image": "assets/room/room-b.png", "mobileImage": "assets/room/room-b-mobile.png" }
+      ],
+      "answer": "A",
+      "passphrase": "hoge"
+    }
+  ],
+  "results": [
+    { "rule": "allCorrect", "title": "一流ゲスト", "description": "味覚もチームワークも、文句なしの一流です。", "image": "assets/rank/rank-ichiryu-mobile.png" },
+    { "rule": "oneMiss", "title": "そっくりゲスト", "description": "惜しい。一流まであと一歩でした。", "image": "assets/rank/rank-sokkuri-mobile.png" },
+    { "rule": "atMostOneThird", "title": "映す価値なし", "description": "味覚はこれから。楽しんだ者勝ちです。", "image": "assets/rank/rank-no-value-mobile.png" },
+    { "rule": "default", "title": "二流ゲスト", "description": "まだまだ伸びしろがあります。", "image": "assets/rank/rank-niryu-mobile.png" }
+  ]
+}
